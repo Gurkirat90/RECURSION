@@ -1,0 +1,80 @@
+//basics of recursion
+//factorial of n
+/*#include<iostream>
+using namespace std;
+int factorial(int n)
+{
+  if(n<=1)
+    return 1;
+  return n*factorial(n-1);
+}
+int main()
+{
+  int n;
+  cin>>n;
+  cout<<"factorial of input number is "<<factorial(n)<<endl;
+  return 0;
+}*/
+//print a string in reverse
+/*#include<iostream>
+using namespace std;
+void reverse(const string& str,int n)
+{
+  if(n>=str.length())
+    return ;
+  reverse(str,n+1);
+  cout <<str[n];
+}
+int main()
+{
+  int n=0;
+  string s;
+  cin>>s;reverse(s,n);
+  return 0;
+}*/
+//fibonacci numbers
+/*#include<iostream>
+using namespace std;
+int fibonacci(int n)
+{
+  if(n==0)return 0;
+    if(n==1)return 1;
+    return fibonacci(n-2)+fibonacci(n-1);
+}
+
+int main()
+{
+  int n=6;
+  cout<<fibonacci(n);
+}*/
+
+
+//recursion call stack
+/*
+in ram memory
+-------
+
+-------
+check()     |3| it will pop first after execution
+-------_________
+solve()_________stack frame  |2| it will pop happen next
+-------
+main()      |1| it will remain till last
+-------
+void solve(int a)
+{
+  int c;
+  check();
+}
+int main()
+{int a;
+  solve(a);
+}
+1.store information about active system calls.
+2.each function call add a new frame to call stack.
+3.each frame has its own set of local variables.explanation:- 'a' in solve() is copy of 'a' of main()//in case of pass by value
+'c'is local variable of solve() // but "a" will change if any chnages are made in solve() //in case of pass by reference 
+*/
+
+
+
